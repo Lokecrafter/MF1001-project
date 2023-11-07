@@ -3,7 +3,7 @@
 
 
 void setup(){
-    Serial.begin(11500);
+    Serial.begin(9600);
 }
 
 void loop(){
