@@ -4,7 +4,7 @@
 #include <Encoder.h>
 
 Encoder encoder(1,2, 500);
-Motor motor(4, 5, 6, &encoder);
+Motor motor(4, 5, 6);
 
 void setup(){
     Serial.begin(9600);
@@ -12,5 +12,5 @@ void setup(){
 
 void loop(){
     Serial.println(encoder.getRevolutions());
-    motor.update();
+    encoder.update();
 }

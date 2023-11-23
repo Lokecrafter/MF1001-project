@@ -2,11 +2,10 @@
 #include<Motor.h>
 
 
-Motor::Motor(int pinA, int pinB, int pinEnable, Encoder* encoder){
+Motor::Motor(int pinA, int pinB, int pinEnable){
     this->pinA = pinA;
     this->pinB = pinB;
     this->pinEnable = pinEnable;
-    this->encoder = encoder;
 }
 
 void Motor::begin(){
@@ -31,8 +30,4 @@ void Motor::driveVelocity(float velocity){
     bool pwmSpeed = clampedVelocity != 0;
 
     digitalWrite(pinEnable, pwmSpeed);  //Maybe implement PWM with ESP32
-}
-
-void Motor::update(){
-    encoder->update();
 }

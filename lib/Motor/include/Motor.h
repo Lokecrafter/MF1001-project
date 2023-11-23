@@ -8,12 +8,10 @@ class Motor{
         int pinA;
         int pinB;
         int pinEnable;
-        Encoder* encoder;
     public:
-        Motor(int pinA, int pinB, int pinEnable, Encoder* encoder);
+        Motor(int pinA, int pinB, int pinEnable);
         void begin();
         void driveVelocity(float velocity);
         void driveToPosition(float position);
-        void update();
 };
 #endif
