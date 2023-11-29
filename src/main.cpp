@@ -3,11 +3,11 @@
 #include <Motor.h>
 #include <Encoder.h>
 
-Encoder encoder(1,2, 500);
-Motor motor(4, 5, 6);
+Encoder encoder(12, 13, 500);
 
 void setup(){
     Serial.begin(9600);
+    encoder.begin();
 }
 
 void loop(){
