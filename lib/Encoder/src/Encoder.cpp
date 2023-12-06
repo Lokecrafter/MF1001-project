@@ -17,7 +17,7 @@ void Encoder::begin(){
 }
 
 float Encoder::getRevolutions(){
-    return counter / countsPerRev;
+    return (float)counter / countsPerRev;
 }
 
 void Encoder::update(){
